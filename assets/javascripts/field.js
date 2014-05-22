@@ -1,9 +1,9 @@
 var Field = (function () {
 	var 
-		// here is the place to create private methods
+		// here is the place to inject private methods
 		_private = {},
 
-		// here are placed all configs
+		// all config values goes here
 		config = {
 			x: 60,
 			y: 60
@@ -15,20 +15,6 @@ var Field = (function () {
 	}
 
 	_private = {
-		size: function (index) {
-			return _private.tail(1, index);
-		},
-
-		tail: function (i, size) {
-			return [i].concat(i < size ? _private.tail(i+1, size) : []);
-		},
-
-		compose: function (a, b) {
-			return function (c) {
-				return a(b(c));
-			};
-		},
-		
 		mapper: function (size) {
 			return size.map(function (index) {
 				index = {
@@ -53,7 +39,7 @@ var Field = (function () {
 	};
 
 	Field.prototype.create = function () {
-		return _private.compose(_private.mapper, _private.size)(this.x);
+		return window.Helpers.compose(_private.mapper, window.Helpers.size)(this.x);
 	};
 
 	return Field;
