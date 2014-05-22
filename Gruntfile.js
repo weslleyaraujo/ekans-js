@@ -11,6 +11,16 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 		watch: {
+			js: {
+				files: [
+					'assets/javascripts/*.js',
+					'spec/*.js',
+				],
+				tasks: [
+					'jshint',
+					'jasmine'
+				]
+			},
 			css: {
 				files: [
 					'assets/sass/*.sass',
@@ -32,7 +42,9 @@ module.exports = function (grunt) {
 		},
 		jshint: {
 			all: [
-				'Gruntfile.js'
+				'Gruntfile.js',
+				'assets/javascripts/*.js',
+				'specs/*.js'
 			]
 		},
 		compass: {
@@ -57,7 +69,7 @@ module.exports = function (grunt) {
 		},
 		jasmine: {
 			src: [
-				'lib/*.js'
+				'assets/javascripts/*.js'
 			],
 			options: {
 				specs: 'spec/*.js'
