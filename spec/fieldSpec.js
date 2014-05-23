@@ -15,7 +15,7 @@ describe('Field', function () {
 			});
 
 			// then
-			expect(this.instance.game.length).toBe(attributes.x);
+			expect(this.instance.data.length).toBe(attributes.x);
 		});
 
 		it('creates the game object array with lines objects', function () {
@@ -32,7 +32,7 @@ describe('Field', function () {
 			});
 
 			// then
-			expect(typeof this.instance.game[0].line).toBe('object');
+			expect(typeof this.instance.data[0].line).toBe('object');
 		});
 	});
 
