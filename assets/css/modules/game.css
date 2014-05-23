@@ -1,0 +1,49 @@
+/* Smacss guide style
+ */
+/* line 9, ../../sass/modules/game.sass */
+.game {
+  background-color: #c5ddc6;
+}
+
+/* line 12, ../../sass/modules/game.sass */
+.game-line {
+  line-height: 18px;
+}
+
+/* line 15, ../../sass/modules/game.sass */
+.game-field {
+  width: 15px;
+  height: 15px;
+  outline: 1px solid black;
+  margin: 0 2px;
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=11);
+  opacity: 0.11;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+/* line 24, ../../sass/modules/game.sass */
+.game-field:after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  background: black;
+  position: absolute;
+  left: 1px;
+  right: 0;
+  top: 1px;
+  bottom: 0;
+}
+/* line 35, ../../sass/modules/game.sass */
+.game-field.is-snake {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}

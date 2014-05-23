@@ -53,7 +53,7 @@ var Field = (function () {
 	};
 
 	Field.prototype.create = function () {
-		return window.Helpers.compose(_private.mapper, window.Helpers.size)((attributes.x - 1), (attributes.y -1));
+		return window.Helpers.compose(_private.mapper, window.Helpers.size)((attributes.x - 1));
 	};
 
 	return Field;
