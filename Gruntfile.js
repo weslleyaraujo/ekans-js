@@ -72,7 +72,11 @@ module.exports = function (grunt) {
 				'assets/javascripts/*.js'
 			],
 			options: {
-				specs: 'spec/*.js'
+				specs: 'spec/*.js',
+				vendor: [
+					"./bower_components/jquery/dist/jquery.min.js",
+					"./bower_components/underscore/underscore.js"
+				]
 			}
 		},
 	});

@@ -1,0 +1,18 @@
+{
+  "name": "ekans-js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/weslleyaraujo/ekans-js",
+  "authors": [
+    "Weslley Araujo <weslleyaraujo20@gmail.com>"
+  ],
+  "description": "Just a game",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
