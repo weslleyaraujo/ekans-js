@@ -6,7 +6,7 @@
 window.Helpers = {};
 
 window.Helpers.size = function (index) {
-	return window.Helpers.tail(1, index);
+	return window.Helpers.tail(0, index);
 };
 
 window.Helpers.tail = function (i, size) {

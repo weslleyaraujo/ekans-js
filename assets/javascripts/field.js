@@ -18,10 +18,24 @@ var Field = (function () {
 		mapper: function (size) {
 			return size.map(function (index) {
 				index = {
-					line: []
+					line: _private.mapLine(index)
 				};
+
 				return index;
-			});
+
+			}.bind(this));
+		},
+
+		mapLine: function (index) {
+			return window.Helpers.size(this.y - 1).map(function (index) {
+				index = {
+					snake: false,
+					snakePosition: 0
+				};
+
+				return index;
+
+			}.bind(this));
 		}
 	};
 
@@ -39,7 +53,7 @@ var Field = (function () {
 	};
 
 	Field.prototype.create = function () {
-		return window.Helpers.compose(_private.mapper, window.Helpers.size)(this.x);
+		return window.Helpers.compose(_private.mapper, window.Helpers.size)(this.x - 1);
 	};
 
 	return Field;

@@ -2,3 +2,5 @@
 *.swo
 .sass-cache
 node_modules
+.grunt
+_SpecRunner.html
