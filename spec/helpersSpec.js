@@ -52,4 +52,42 @@ describe('Helpers', function () {
 
 	});
 
+	describe('template', function () {
+		beforeEach(function () {
+			this.content = 'content';
+			this.$body = $('body');
+			this.$template = $('<script type="text/template" id="template">'+ this.content +'</script>');
+			this.$body.append(this.$template);
+		});
+
+		afterEach(function () {
+			this.$body.find('#template').remove();
+		});
+
+		it('returns a function template by underscore', function () {
+			// given
+			var selector = '#template',
+					content = 'content';
+
+			// when
+			template = window.Helpers.template(selector);
+
+			// then
+			expect(typeof template).toBe('function');
+		});
+
+		it('evaluates the template function', function () {
+			// given
+			var selector = '#template',
+					content = 'content';
+
+			// when
+			template = window.Helpers.template(selector);
+
+			// then
+			expect(template()).toBe(content);
+		});
+
+	});
+
 });

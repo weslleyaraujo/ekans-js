@@ -13,7 +13,8 @@ module.exports = function (grunt) {
 		watch: {
 			js: {
 				files: [
-					'assets/javascripts/*.js',
+					'lib/*.js',
+					'lib/**/*.js',
 					'spec/*.js',
 				],
 				tasks: [
@@ -69,7 +70,8 @@ module.exports = function (grunt) {
 		},
 		jasmine: {
 			src: [
-				'assets/javascripts/*.js'
+				'lib/*.js',
+				'lib/**/*.js',
 			],
 			options: {
 				specs: 'spec/*.js',

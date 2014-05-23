@@ -1,4 +1,4 @@
-describe('Ekans', function () {
+describe('Snake', function () {
 
 	describe('create', function () {
 
@@ -7,7 +7,7 @@ describe('Ekans', function () {
 			this.instance;
 
 			// when
-			this.instance = new Ekans();
+			this.instance = new Snake();
 
 			// then
 			expect(this.instance.snake.length).toBe(3);
@@ -18,7 +18,7 @@ describe('Ekans', function () {
 			this.instance;
 
 			// when
-			this.instance = new Ekans();
+			this.instance = new Snake();
 
 			// then
 			expect(typeof this.instance.snake[0]).toBe('object');
