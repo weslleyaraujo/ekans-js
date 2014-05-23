@@ -16,18 +16,11 @@
 	<body>
 
 		<table class="game" cellspacing="0" id="game">
-			<tr class="game-line">
-				<td class="game-field"></td>
-				<td class="game-field"></td>
-				<td class="game-field"></td>
-			</tr>
-
-			<tr class="game-line">
-				<td class="game-field"></td>
-				<td class="game-field is-snake"></td>
-				<td class="game-field"></td>
-			</tr>
 		</table>
+
+		<script type="text/template" id="field-template">
+			<td class="game-field"></td>
+		</script>
 
 		<script src="./bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="./bower_components/underscore/underscore.js"></script>
