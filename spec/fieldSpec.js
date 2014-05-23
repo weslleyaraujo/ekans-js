@@ -3,7 +3,7 @@ describe('Field', function () {
 	describe('create', function () {
 		it('creates the game object', function () {
 			// given
-			var config = {
+			var attributes = {
 				x: 10,
 				y: 10
 			};
@@ -15,12 +15,12 @@ describe('Field', function () {
 			});
 
 			// then
-			expect(this.instance.game.length).toBe(config.x);
+			expect(this.instance.game.length).toBe(attributes.x);
 		});
 
 		it('creates the game object array with lines objects', function () {
 			// given
-			var config = {
+			var attributes = {
 				x: 10,
 				y: 10
 			};
@@ -39,7 +39,7 @@ describe('Field', function () {
 	describe('set', function () {
 		it('set the instance params', function () {
 			// given
-			var config = {
+			var attributes = {
 				x: 10,
 				y: 10
 			};
@@ -50,7 +50,7 @@ describe('Field', function () {
 				y: 10
 			});
 
-			expect(this.instance.x).toBe(config.x);
+			expect(this.instance.args.x).toBe(attributes.x);
 
 		});
 	});

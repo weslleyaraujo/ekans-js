@@ -3,10 +3,10 @@ var Field = (function () {
 		// here is the place to inject private methods
 		_private = {},
 
-		// all config values goes here
-		config = {
-			x: 60,
-			y: 60
+		// all attributes values goes here
+		attributes = {
+			x: 30,
+			y: 30
 		};
 
 	function Field (args) {
@@ -18,7 +18,7 @@ var Field = (function () {
 		mapper: function (size) {
 			return size.map(function (index) {
 				index = {
-					line: _private.mapLine(index)
+					line: _private.mapLine()
 				};
 
 				return index;
@@ -26,8 +26,8 @@ var Field = (function () {
 			}.bind(this));
 		},
 
-		mapLine: function (index) {
-			return window.Helpers.size(this.y - 1).map(function (index) {
+		mapLine: function () {
+			return window.Helpers.size(attributes.y - 1).map(function (index) {
 				index = {
 					snake: false,
 					snakePosition: 0
@@ -48,12 +48,12 @@ var Field = (function () {
 	};
 
 	Field.prototype.set = function () {
-		this.x = this.args.x || config.x;
-		this.y = this.args.y || config.y;
+		attributes.x = this.args.x || attributes.x;
+		attributes.y = this.args.y || attributes.y;
 	};
 
 	Field.prototype.create = function () {
-		return window.Helpers.compose(_private.mapper, window.Helpers.size)(this.x - 1);
+		return window.Helpers.compose(_private.mapper, window.Helpers.size)((attributes.x - 1), (attributes.y -1));
 	};
 
 	return Field;
