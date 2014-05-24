@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title></title>
+		<title>Ekans js!</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,7 +19,10 @@
 		</table>
 
 		<script type="text/template" id="field-template">
-			<td class="game-field"></td>
+			<td class="game-field"
+				data-position="<%= position %>"
+				data-line="<%= line %>">
+			</td>
 		</script>
 
 		<script src="./bower_components/jquery/dist/jquery.min.js"></script>
