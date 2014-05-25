@@ -19,7 +19,7 @@ $module-background-color: #C5DDC6
   margin: 0 2px
   position: relative
   +inline-block
-  +opacity(0.11)
+  +opacity(0.03)
   +transition(0.3s)
   &:after
     content: ''
@@ -33,4 +33,8 @@ $module-background-color: #C5DDC6
     bottom: 0
 
   &.is-snake
+    outline: 1px solid
     +opacity(1)
+    &:after
+      +opacity(1)
+

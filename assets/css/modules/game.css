@@ -23,8 +23,8 @@
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=11);
-  opacity: 0.11;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=3);
+  opacity: 0.03;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
@@ -44,6 +44,12 @@
 }
 /* line 35, ../../sass/modules/game.sass */
 .game-field.is-snake {
+  outline: 1px solid;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 38, ../../sass/modules/game.sass */
+.game-field.is-snake:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
