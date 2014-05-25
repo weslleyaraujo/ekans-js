@@ -49,7 +49,8 @@ describe('Field', function () {
 				x: 10,
 				y: 10
 			});
-
+			
+			// then
 			expect(this.instance.args.x).toBe(attributes.x);
 
 		});
