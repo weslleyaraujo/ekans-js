@@ -18,7 +18,7 @@ describe('FieldView', function () {
 		this.$body.find(this.selector).remove();
 	});
 
-	describe('set', function () {
+	describe('set (called on instance)', function () {
 		it('set the main args and view elements', function () {
 			expect(this.instance.args['field'].constructor.name).toBe('Field');
 			expect(this.instance.args['snake'].constructor.name).toBe('Snake');
@@ -27,7 +27,7 @@ describe('FieldView', function () {
 		});
 	});
 
-	describe('render', function () {
+	describe('render (called on instance)', function () {
 		it('renders data into DOM', function () {
 			expect(this.instance.$el.find('tr')).toBeDefined();
 		});
