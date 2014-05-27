@@ -9,11 +9,33 @@ describe('Ekans', function () {
 	});
 
 	describe('initialize', function () {
-		it('should call method set on instance', function () {
-			spyOn(Ekans.prototype, 'set');
-			this.instance = new Ekans();
-			expect(Ekans.prototype.set).toHaveBeenCalled();
-		})
+		describe('when args is not passed', function () {
+			it('initiliazes with empty object', function () {
+				var ekans = new Ekans();
+				expect(ekans.args).toEqual({});
+			});
+
+			it ('should call methods set on instance', function () {
+				spyOn(Ekans.prototype, 'set');
+				this.instance = new Ekans();
+				expect(this.instance.set).toHaveBeenCalled();
+			});
+
+			it('should call methods bind on instance', function () {
+				spyOn(Ekans.prototype, 'bind');
+				this.instance = new Ekans();
+				expect(this.instance.bind).toHaveBeenCalled();
+			});
+		});
+
+		describe('when args is passed', function () {
+			it('sets the given args', function () {
+				var args = 'double',
+					ekans = new Ekans(args);
+				expect(ekans.args).toEqual(args);
+			});
+		});
+
 	});
 
 });
