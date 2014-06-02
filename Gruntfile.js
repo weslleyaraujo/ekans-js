@@ -36,6 +36,7 @@ module.exports = function (grunt) {
 		concat_css: {
 			all: {
 				src: [
+					'assets/css/page.css',
 					'assets/css/modules/*.css'
 				],
 				dest: 'assets/css/app.css'

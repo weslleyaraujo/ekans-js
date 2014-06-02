@@ -4,7 +4,9 @@
 @import 'compass'
 
 $module-name: 'game'
-$module-background-color: #C5DDC6
+$module-background-color: #D4D9A6
+$module-item-color: #C9A83A
+$module-wrap-background-color: rgb(88, 108, 211)
 
 .#{$module-name}
   background-color: $module-background-color
@@ -15,17 +17,17 @@ $module-background-color: #C5DDC6
 .#{$module-name}-field
   width: 15px
   height: 15px
-  outline: 1px solid #000
+  outline: 1px solid $module-item-color
   margin: 0 2px
   position: relative
   +inline-block
-  +opacity(0.03)
+  +opacity(0.1)
   +transition(0.3s)
   &:after
     content: ''
     width: 13px
     height: 13px
-    background: #000
+    background: $module-item-color
     position: absolute
     left: 1px
     right: 0
@@ -41,3 +43,20 @@ $module-background-color: #C5DDC6
     +opacity(1)
     &:after
       +opacity(1)
+
+.#{$module-name}-wrap
+  background-color: $module-wrap-background-color
+  padding: 50px 0 470px 0
+  width: 500px
+  margin: 0 auto
+  position: relative
+  +border-radius(13px)
+  &:after
+    content: ''
+    position: absolute
+    width: 385px
+    height: 385px
+    top: 46px
+    left: 56px
+    +box-shadow(inset 7px 8px 0px rgba(0,0,0,0.5))
+    +opacity(0.5)

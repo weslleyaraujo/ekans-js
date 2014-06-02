@@ -1,20 +1,104 @@
+
 /* Smacss guide style
  */
-/* line 9, ../../sass/modules/game.sass */
-.game {
-  background-color: #c5ddc6;
+/* line 11, ../../sass/modules/buttons.sass */
+.buttons {
+  background-color: #f3e800;
+  position: absolute;
+  -webkit-box-shadow: 0px 4px 0 #776c1c;
+  -moz-box-shadow: 0px 4px 0 #776c1c;
+  box-shadow: 0px 4px 0 #776c1c;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+/* line 16, ../../sass/modules/buttons.sass */
+.buttons:active {
+  margin-top: 1px;
+}
+/* line 18, ../../sass/modules/buttons.sass */
+.buttons:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0px -3px 0 #afa036;
+  -moz-box-shadow: inset 0px -3px 0 #afa036;
+  box-shadow: inset 0px -3px 0 #afa036;
 }
 
-/* line 12, ../../sass/modules/game.sass */
+/* line 28, ../../sass/modules/buttons.sass */
+.buttons-directionals-wrap,
+.buttons-start-wrap {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  float: left;
+  margin-top: 40px;
+}
+
+/* line 36, ../../sass/modules/buttons.sass */
+.buttons-directionals-wrap {
+  margin-left: 40px;
+}
+
+/* line 39, ../../sass/modules/buttons.sass */
+.buttons-directionals {
+  width: 70px;
+  height: 70px;
+}
+/* line 43, ../../sass/modules/buttons.sass */
+.buttons-directionals.is-up {
+  left: 60px;
+  top: 120px;
+}
+/* line 47, ../../sass/modules/buttons.sass */
+.buttons-directionals.is-right {
+  top: 60px;
+  left: 0;
+}
+/* line 51, ../../sass/modules/buttons.sass */
+.buttons-directionals.is-down {
+  top: 60px;
+  left: 120px;
+}
+/* line 55, ../../sass/modules/buttons.sass */
+.buttons-directionals.is-left {
+  left: 60px;
+  top: 0;
+}
+
+/* line 59, ../../sass/modules/buttons.sass */
+.buttons-start {
+  width: 130px;
+  height: 130px;
+}
+/* Smacss guide style
+ */
+/* line 11, ../../sass/modules/game.sass */
+.game {
+  background-color: #d4d9a6;
+}
+
+/* line 14, ../../sass/modules/game.sass */
 .game-line {
   line-height: 18px;
 }
 
-/* line 15, ../../sass/modules/game.sass */
+/* line 17, ../../sass/modules/game.sass */
 .game-field {
   width: 15px;
   height: 15px;
-  outline: 1px solid black;
+  outline: 1px solid #c9a83a;
   margin: 0 2px;
   position: relative;
   display: -moz-inline-stack;
@@ -23,42 +107,70 @@
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=3);
-  opacity: 0.03;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  opacity: 0.1;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 24, ../../sass/modules/game.sass */
+/* line 26, ../../sass/modules/game.sass */
 .game-field:after {
   content: "";
   width: 13px;
   height: 13px;
-  background: black;
+  background: #c9a83a;
   position: absolute;
   left: 1px;
   right: 0;
   top: 1px;
   bottom: 0;
 }
-/* line 35, ../../sass/modules/game.sass */
+/* line 37, ../../sass/modules/game.sass */
 .game-field.is-snake {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 37, ../../sass/modules/game.sass */
+/* line 39, ../../sass/modules/game.sass */
 .game-field.is-snake:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 40, ../../sass/modules/game.sass */
+/* line 42, ../../sass/modules/game.sass */
 .game-field.is-food {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 42, ../../sass/modules/game.sass */
+/* line 44, ../../sass/modules/game.sass */
 .game-field.is-food:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
+}
+
+/* line 47, ../../sass/modules/game.sass */
+.game-wrap {
+  background-color: #586cd3;
+  padding: 50px 0 470px 0;
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
+  border-radius: 13px;
+}
+/* line 54, ../../sass/modules/game.sass */
+.game-wrap:after {
+  content: "";
+  position: absolute;
+  width: 385px;
+  height: 385px;
+  top: 46px;
+  left: 56px;
+  -webkit-box-shadow: inset 7px 8px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 7px 8px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 7px 8px 0px rgba(0, 0, 0, 0.5);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
 }
