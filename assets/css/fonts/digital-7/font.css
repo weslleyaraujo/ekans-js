@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'Digital7Regular';
+	src: url('/assets/css/fonts/digital-7/digital-7.eot');
+	src: url('/assets/css/fonts/digital-7/digital-7.eot') format('embedded-opentype'),
+	url('/assets/css/fonts/digital-7/digital-7.woff') format('woff'),
+	url('/assets/css/fonts/digital-7/digital-7.ttf') format('truetype'),
+	url('/assets/css/fonts/digital-7/digital-7.svg#Digital7Regular') format('svg');
+}

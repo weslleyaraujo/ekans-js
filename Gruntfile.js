@@ -26,6 +26,7 @@ module.exports = function (grunt) {
 				files: [
 					'assets/sass/*.sass',
 					'assets/sass/**/*.sass',
+					'assets/css/**/*.css'
 				],
 				tasks: [
 					'compass:dev',
@@ -36,8 +37,8 @@ module.exports = function (grunt) {
 		concat_css: {
 			all: {
 				src: [
-					'assets/css/page.css',
-					'assets/css/modules/*.css'
+					'assets/css/modules/*.css',
+					'assets/css/fonts/**/*.css'
 				],
 				dest: 'assets/css/app.css'
 			}
