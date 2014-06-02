@@ -1,0 +1,27 @@
+/*
+ * Smacss guide style
+ */
+@import 'compass'
+
+$module-name: 'intro'
+$module-font-size: 23px
+$module-color: #80660F
+
+.#{$module-name}
+  position: relative
+  margin: 0 auto
+  width: 380px
+  z-index: 2
+  color: $module-color
+  font-size: $module-font-size 
+  +opacity(0)
+  +transition(0.3s)
+
+  &.is-visible
+    +opacity(1)
+
+.#{$module-name}-wrap
+  position: absolute
+  width: 100%
+  height: 100%
+  margin: 50px 0 0 0

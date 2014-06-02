@@ -1,0 +1,30 @@
+/* Smacss guide style
+ */
+/* line 10, ../../sass/modules/intro.sass */
+.intro {
+  position: relative;
+  margin: 0 auto;
+  width: 380px;
+  z-index: 2;
+  color: #80660f;
+  font-size: 23px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+/* line 20, ../../sass/modules/intro.sass */
+.intro.is-visible {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* line 23, ../../sass/modules/intro.sass */
+.intro-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 50px 0 0 0;
+}

@@ -14,7 +14,16 @@
 		<link rel="stylesheet" href="assets/css/app.css">
 	</head>
 	<body>
-		bigodao
+
+		<div class="intro">
+			<div class="intro-wrap">
+				<h1>EKANS JS</h1>
+				<p>snake game created with javascript!</p>
+				<p>press SPACE BAR to start</p>
+				<p>or click on the big button above</p>
+			</div>
+		</div>
+
 		<div class="game-wrap">
 			<table class="game" cellspacing="0" id="game">
 			</table>
@@ -53,8 +62,76 @@
 
 		<script>
 			(function () {
-				var ekans = new Ekans();
-				ekans.start();
+				var ekans = (function () {
+					var app, attributes= {
+						keys: {
+							space: 32
+						},
+						messages: {
+							newGame: 'Do you really want to start a new game?'
+						},
+
+						running: false
+					},
+
+					app = {
+						initialize: function () {
+							this.set();
+							this.hideSnake();
+							this.bind();
+							this.showIntro();
+						},
+
+						set: function () {
+							this.ekans = new Ekans();
+							this.$items = $('td');
+							this.$intro = $('.intro');
+							this.$body = $('body');
+						},
+
+						bind: function () {
+							this.$body.on('keypress', this.onKey);
+						},
+
+						hideSnake: function () {
+							this.$items.removeClass('is-snake is-food');
+						},
+
+						hideIntro: function () {
+							this.$intro.removeClass('is-visible');
+						},
+
+						showIntro: function () {
+							this.$intro.addClass('is-visible');
+						},
+
+						onKey: function (event) {
+							switch (event.which) {
+								case attributes.keys.space :
+									event.preventDefault();
+									if (!attributes.running) {
+										app.start();
+									}
+									else if (confirm(attributes.messages.newGame)) {
+										app.start();
+									}
+								break;
+							}
+							
+						},
+
+						start: function () {
+							attributes.running = true;
+							app.hideIntro();
+							this.ekans = new Ekans();
+							app.ekans.start();
+						}
+
+					};
+
+					return app;
+
+				}().initialize());
 			}());
 		</script>
 
