@@ -19,7 +19,7 @@
 		</table>
 
 		<script type="text/template" id="field-template">
-			<td class="game-field <% if (snake || food) { %> is-snake <% } %>"
+			<td class="game-field <% if (snake) { %> is-snake <% } %> <% if (food) { %> is-food <% } %>"
 				data-position="<%= position %>"
 				data-line="<%= line %>">
 			</td>

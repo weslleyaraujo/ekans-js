@@ -33,8 +33,11 @@ $module-background-color: #C5DDC6
     bottom: 0
 
   &.is-snake
-    outline: 1px solid
     +opacity(1)
     &:after
       +opacity(1)
 
+  &.is-food
+    +opacity(1)
+    &:after
+      +opacity(1)

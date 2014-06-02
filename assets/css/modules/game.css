@@ -44,12 +44,21 @@
 }
 /* line 35, ../../sass/modules/game.sass */
 .game-field.is-snake {
-  outline: 1px solid;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 38, ../../sass/modules/game.sass */
+/* line 37, ../../sass/modules/game.sass */
 .game-field.is-snake:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 40, ../../sass/modules/game.sass */
+.game-field.is-food {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 42, ../../sass/modules/game.sass */
+.game-field.is-food:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
