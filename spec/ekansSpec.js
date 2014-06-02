@@ -10,11 +10,6 @@ describe('Ekans', function () {
 
 	describe('initialize', function () {
 		describe('when args is not passed', function () {
-			it('initiliazes with empty object', function () {
-				var ekans = new Ekans();
-				expect(ekans.args).toEqual({});
-			});
-
 			it ('should call methods set on instance', function () {
 				spyOn(Ekans.prototype, 'set');
 				this.instance = new Ekans();
@@ -27,14 +22,9 @@ describe('Ekans', function () {
 				expect(this.instance.bind).toHaveBeenCalled();
 			});
 		});
+	});
 
-		describe('when args is passed', function () {
-			it('sets the given args', function () {
-				var args = 'double',
-					ekans = new Ekans(args);
-				expect(ekans.args).toEqual(args);
-			});
-		});
+	describe('set', function () {
 
 	});
 

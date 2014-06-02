@@ -19,7 +19,7 @@
 		</table>
 
 		<script type="text/template" id="field-template">
-			<td class="game-field <% if (snake) { %> is-snake <% } %>"
+			<td class="game-field <% if (snake || food) { %> is-snake <% } %>"
 				data-position="<%= position %>"
 				data-line="<%= line %>">
 			</td>
@@ -29,16 +29,17 @@
 		<script src="./bower_components/underscore/underscore.js"></script>
 
 		<script src="/lib/helpers.js"></script>
+		<script src="/lib/data/food.js"></script>
 		<script src="/lib/data/field.js"></script>
 		<script src="/lib/data/snake.js"></script>
 		<script src="/lib/views/fieldView.js"></script>
 		<script src="/lib/ekans.js"></script>
 
 		<script>
-			$(function () {
+			(function () {
 				var ekans = new Ekans();
 				ekans.start();
-			});
+			}());
 		</script>
 
 	</body>
