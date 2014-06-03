@@ -65,22 +65,22 @@
 /* line 48, ../../sass/modules/buttons.sass */
 .buttons-directionals.is-up {
   left: 60px;
-  top: 120px;
+  top: 0;
 }
 /* line 52, ../../sass/modules/buttons.sass */
 .buttons-directionals.is-right {
   top: 60px;
-  left: 0;
+  left: 120px;
 }
 /* line 56, ../../sass/modules/buttons.sass */
 .buttons-directionals.is-down {
-  top: 60px;
-  left: 120px;
+  left: 60px;
+  top: 120px;
 }
 /* line 60, ../../sass/modules/buttons.sass */
 .buttons-directionals.is-left {
-  left: 60px;
-  top: 0;
+  top: 60px;
+  left: 0;
 }
 
 /* line 64, ../../sass/modules/buttons.sass */

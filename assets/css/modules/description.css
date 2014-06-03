@@ -1,0 +1,15 @@
+/* Smacss guide style
+ */
+/* line 9, ../../sass/modules/description.sass */
+.description {
+  position: absolute;
+  bottom: 18px;
+  color: white;
+  right: 22px;
+  font-size: 20px;
+}
+
+/* line 16, ../../sass/modules/description.sass */
+.description-heart {
+  color: #fd4b1e;
+}

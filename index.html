@@ -14,13 +14,29 @@
 		<link rel="stylesheet" href="assets/css/app.css">
 	</head>
 	<body>
+		<div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=425790020851650&version=v2.0";
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+
+		<iframe src="http://ghbtns.com/github-btn.html?user=weslleyaraujo&repo=ekans-js&type=watch&count=true&size=small"
+			allowtransparency="true" frameborder="0" scrolling="0" width="80" height="30" class="top-social star">
+		</iframe>
+
+		<div class="fb-like top-social like" data-href="http://weslleyaraujo.github.io/ekans-js" data-width="100" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 
 		<div class="intro" id="intro">
 			<div class="intro-wrap">
 				<h1>EKANS JS</h1>
 				<p>snake game created with javascript!</p>
+				<p>use your arrows keyboard to play</p>
 				<p>press SPACE BAR to start</p>
-				<p>or click on the big button above</p>
 			</div>
 		</div>
 
@@ -38,16 +54,19 @@
 			<div class="game-buttons">
 				<div class="buttons-wrap">
 					<div class="buttons-start-wrap">
-						<a class="buttons buttons-start" href="javascript:void(0);"></a>
+						<a data-keypress="32" class="buttons buttons-start" href="javascript:void(0);"></a>
 					</div>
 
 					<div class="buttons-directionals-wrap">
-						<a class="buttons buttons-directionals is-up" href="javascript:void(0);"></a>
-						<a class="buttons buttons-directionals is-right" href="javascript:void(0);"></a>
-						<a class="buttons buttons-directionals is-down" href="javascript:void(0);"></a>
-						<a class="buttons buttons-directionals is-left" href="javascript:void(0);"></a>
+						<a data-keypress="38" class="buttons buttons-directionals is-up" href="javascript:void(0);"></a>
+						<a data-keypress="39" class="buttons buttons-directionals is-right" href="javascript:void(0);"></a>
+						<a data-keypress="40" class="buttons buttons-directionals is-down" href="javascript:void(0);"></a>
+						<a data-keypress="37" class="buttons buttons-directionals is-left" href="javascript:void(0);"></a>
 					</div>
 				</div>
+			</div>
+			<div class="description">
+				created with <span class="description-heart">&hearts;</span> by Weslley Araujo
 			</div>
 		</div>
 
@@ -96,10 +115,12 @@
 							this.$intro = $('#intro');
 							this.$died = $('#died');
 							this.$body = $('body');
+							this.$buttons = $('[data-keypress]');
 						},
 
 						bind: function () {
 							this.$body.on('keypress', this.onKey);
+							this.$buttons.on('click', this.onClick);
 						},
 
 						hideSnake: function () {
@@ -118,7 +139,7 @@
 						onKey: function (event) {
 							switch (event.which) {
 								case attributes.keys.space :
-									event.preventDefault();
+									event.preventDefault && event.preventDefault();
 									if (!attributes.running) {
 										app.start();
 									}
@@ -139,8 +160,21 @@
 							app.hideIntro();
 							this.ekans = new Ekans();
 							app.ekans.start();
-						}
+						},
 
+						onClick: function (event) {
+							var which = $(this).data('keypress'),
+							event = {
+								which: which
+							};
+							console.log(attributes);
+							if (event.which !== attributes.keys.space && attributes.running) {
+								app.ekans.move(event);
+							}
+							else {
+								app.onKey(event);
+							}
+						}
 					};
 
 					return app;

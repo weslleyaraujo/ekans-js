@@ -1,0 +1,16 @@
+/* Smacss guide style
+ */
+/* line 8, ../../sass/modules/top-social.sass */
+.top-social {
+  position: absolute !important;
+}
+/* line 11, ../../sass/modules/top-social.sass */
+.top-social.star {
+  right: 10px;
+  top: 10px;
+}
+/* line 15, ../../sass/modules/top-social.sass */
+.top-social.like {
+  right: 100px;
+  top: 9px;
+}

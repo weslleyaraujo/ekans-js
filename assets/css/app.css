@@ -65,22 +65,22 @@
 /* line 48, ../../sass/modules/buttons.sass */
 .buttons-directionals.is-up {
   left: 60px;
-  top: 120px;
+  top: 0;
 }
 /* line 52, ../../sass/modules/buttons.sass */
 .buttons-directionals.is-right {
   top: 60px;
-  left: 0;
+  left: 120px;
 }
 /* line 56, ../../sass/modules/buttons.sass */
 .buttons-directionals.is-down {
-  top: 60px;
-  left: 120px;
+  left: 60px;
+  top: 120px;
 }
 /* line 60, ../../sass/modules/buttons.sass */
 .buttons-directionals.is-left {
-  left: 60px;
-  top: 0;
+  top: 60px;
+  left: 0;
 }
 
 /* line 64, ../../sass/modules/buttons.sass */
@@ -89,6 +89,29 @@
   height: 130px;
   left: 0;
   top: 35px;
+}
+/* Smacss guide style
+ */
+/* line 9, ../../sass/modules/description.sass */
+.description {
+  position: absolute;
+  bottom: 18px;
+  color: white;
+  right: 22px;
+  font-size: 20px;
+}
+
+/* line 16, ../../sass/modules/description.sass */
+.description-heart {
+  color: #fd4b1e;
+}
+/* Smacss guide style
+ */
+/* line 8, ../../sass/modules/fork.sass */
+.fork {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 /* Smacss guide style
  */
@@ -158,17 +181,18 @@
 /* line 47, ../../sass/modules/game.sass */
 .game-wrap {
   background-color: #586cd3;
-  padding: 50px 0 470px 0;
+  padding: 50px 0 0 0;
   width: 500px;
-  margin: 60px auto 0 auto;
+  margin: 60px auto;
   position: relative;
+  height: 880px;
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
   -ms-border-radius: 13px;
   -o-border-radius: 13px;
   border-radius: 13px;
 }
-/* line 54, ../../sass/modules/game.sass */
+/* line 55, ../../sass/modules/game.sass */
 .game-wrap:after {
   content: "";
   position: absolute;
@@ -211,6 +235,22 @@
   width: 100%;
   height: 100%;
   margin: 50px 0 0 0;
+}
+/* Smacss guide style
+ */
+/* line 8, ../../sass/modules/top-social.sass */
+.top-social {
+  position: absolute !important;
+}
+/* line 11, ../../sass/modules/top-social.sass */
+.top-social.star {
+  right: 10px;
+  top: 10px;
+}
+/* line 15, ../../sass/modules/top-social.sass */
+.top-social.like {
+  right: 100px;
+  top: 9px;
 }
 @font-face {
 	font-family: 'Digital7Regular';

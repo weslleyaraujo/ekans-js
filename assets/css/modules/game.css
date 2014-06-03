@@ -66,17 +66,18 @@
 /* line 47, ../../sass/modules/game.sass */
 .game-wrap {
   background-color: #586cd3;
-  padding: 50px 0 470px 0;
+  padding: 50px 0 0 0;
   width: 500px;
-  margin: 60px auto 0 auto;
+  margin: 60px auto;
   position: relative;
+  height: 880px;
   -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
   -ms-border-radius: 13px;
   -o-border-radius: 13px;
   border-radius: 13px;
 }
-/* line 54, ../../sass/modules/game.sass */
+/* line 55, ../../sass/modules/game.sass */
 .game-wrap:after {
   content: "";
   position: absolute;
