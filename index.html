@@ -121,6 +121,10 @@
 						},
 
 						start: function () {
+							if (attributes.running) {
+								this.ekans.end();
+							}
+
 							attributes.running = true;
 							app.hideIntro();
 							this.ekans = new Ekans();
