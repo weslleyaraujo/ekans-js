@@ -91,3 +91,8 @@
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
+
+/* line 66, ../../sass/modules/game.sass */
+.points {
+  color: #ff2828;
+}

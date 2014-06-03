@@ -14,3 +14,13 @@
   right: 100px;
   top: 9px;
 }
+/* line 19, ../../sass/modules/top-social.sass */
+.top-social.share {
+  left: 100px;
+  bottom: 26px;
+}
+/* line 23, ../../sass/modules/top-social.sass */
+.top-social.tweet {
+  right: 50px;
+  bottom: 26px;
+}
