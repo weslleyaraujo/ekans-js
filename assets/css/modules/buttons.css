@@ -36,6 +36,12 @@
 }
 
 /* line 28, ../../sass/modules/buttons.sass */
+.buttons-wrap {
+  width: 435px;
+  margin: 0 auto;
+}
+
+/* line 32, ../../sass/modules/buttons.sass */
 .buttons-directionals-wrap,
 .buttons-start-wrap {
   position: relative;
@@ -45,39 +51,42 @@
   margin-top: 40px;
 }
 
-/* line 36, ../../sass/modules/buttons.sass */
+/* line 40, ../../sass/modules/buttons.sass */
 .buttons-directionals-wrap {
-  margin-left: 40px;
+  margin-left: 50px;
+  margin-top: 100px;
 }
 
-/* line 39, ../../sass/modules/buttons.sass */
+/* line 44, ../../sass/modules/buttons.sass */
 .buttons-directionals {
   width: 70px;
   height: 70px;
 }
-/* line 43, ../../sass/modules/buttons.sass */
+/* line 48, ../../sass/modules/buttons.sass */
 .buttons-directionals.is-up {
   left: 60px;
   top: 120px;
 }
-/* line 47, ../../sass/modules/buttons.sass */
+/* line 52, ../../sass/modules/buttons.sass */
 .buttons-directionals.is-right {
   top: 60px;
   left: 0;
 }
-/* line 51, ../../sass/modules/buttons.sass */
+/* line 56, ../../sass/modules/buttons.sass */
 .buttons-directionals.is-down {
   top: 60px;
   left: 120px;
 }
-/* line 55, ../../sass/modules/buttons.sass */
+/* line 60, ../../sass/modules/buttons.sass */
 .buttons-directionals.is-left {
   left: 60px;
   top: 0;
 }
 
-/* line 59, ../../sass/modules/buttons.sass */
+/* line 64, ../../sass/modules/buttons.sass */
 .buttons-start {
   width: 130px;
   height: 130px;
+  left: 0;
+  top: 35px;
 }
