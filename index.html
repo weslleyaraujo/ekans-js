@@ -15,12 +15,20 @@
 	</head>
 	<body>
 
-		<div class="intro">
+		<div class="intro" id="intro">
 			<div class="intro-wrap">
 				<h1>EKANS JS</h1>
 				<p>snake game created with javascript!</p>
 				<p>press SPACE BAR to start</p>
 				<p>or click on the big button above</p>
+			</div>
+		</div>
+
+		<div class="intro" id="died">
+			<div class="intro-wrap">
+				<h1>YOU DIED!</h1>
+				<p>press space to try again</p>
+				<p>share this games with your friends</p>
 			</div>
 		</div>
 
@@ -85,7 +93,8 @@
 						set: function () {
 							this.ekans = new Ekans();
 							this.$items = $('td');
-							this.$intro = $('.intro');
+							this.$intro = $('#intro');
+							this.$died = $('#died');
 							this.$body = $('body');
 						},
 
@@ -99,6 +108,7 @@
 
 						hideIntro: function () {
 							this.$intro.removeClass('is-visible');
+							this.$died.removeClass('is-visible');
 						},
 
 						showIntro: function () {
