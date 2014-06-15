@@ -1,7 +1,7 @@
 {
   "name": "Ekans.js",
-  "version": "0.0.0",
-  "description": "Remeber the snake? yeah its just the same game :)",
+  "version": "0.1.0",
+  "description": "Remember the snake? yeah its just the same game :)",
   "main": "index.js",
   "scripts": {
     "test": "grunt jasmine"
