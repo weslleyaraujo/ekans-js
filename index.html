@@ -1,208 +1,208 @@
 <!doctype html>
 <html class="no-js" lang="">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Ekans js!</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ekans js!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
-		<link rel="stylesheet" href="assets/css/normalize.css">
-		<link rel="stylesheet" href="assets/css/main.css">
-		<link rel="stylesheet" href="assets/css/app.css">
-	</head>
-	<body>
-		<div id="fb-root"></div>
-		<script>
-			(function(d, s, id) {
-			  var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=425790020851650&version=v2.0";
-			fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-		</script>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=425790020851650&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
-		<iframe src="http://ghbtns.com/github-btn.html?user=weslleyaraujo&repo=ekans-js&type=watch&count=true&size=small"
-			allowtransparency="true" frameborder="0" scrolling="0" width="80" height="30" class="top-social star">
-		</iframe>
+    <iframe src="http://ghbtns.com/github-btn.html?user=weslleyaraujo&repo=ekans-js&type=watch&count=true&size=small"
+      allowtransparency="true" frameborder="0" scrolling="0" width="80" height="30" class="top-social star">
+    </iframe>
 
-		<div class="fb-like top-social like" data-href="http://weslleyaraujo.github.io/ekans-js" data-width="100" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+    <div class="fb-like top-social like" data-href="http://weslleyaraujo.github.io/ekans-js" data-width="100" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 
-		<div class="intro" id="intro">
-			<div class="intro-wrap">
-				<h1>EKANS JS</h1>
-				<p>snake game created with javascript!</p>
-				<p>use your arrows keyboard to play</p>
-				<p>press SPACE BAR to start</p>
-			</div>
-		</div>
+    <div class="intro" id="intro">
+      <div class="intro-wrap">
+        <h1>EKANS JS</h1>
+        <p>snake game created with javascript!</p>
+        <p>use your arrows keyboard to play</p>
+        <p>press SPACE BAR to start</p>
+      </div>
+    </div>
 
-		<div class="intro" id="died">
-			<div class="intro-wrap">
-				<h1>YOU DIED!</h1>
-				<p>you reached <span class="points"></span> pts</p>
-				<p>press space to try again</p>
-				<p>share this games with your friends</p>
-				<div class="social-share">
-					<div class="fb-share-button top-social share" data-href="http://weslleyaraujo.github.io/ekans-js/" data-type="button_count"></div>
+    <div class="intro" id="died">
+      <div class="intro-wrap">
+        <h1>YOU DIED!</h1>
+        <p>you reached <span class="points"></span> pts</p>
+        <p>press space to try again</p>
+        <p>share this games with your friends</p>
+        <div class="social-share">
+          <div class="fb-share-button top-social share" data-href="http://weslleyaraujo.github.io/ekans-js/" data-type="button_count"></div>
 
-					<a href="https://twitter.com/share" class="twitter-share-button top-social tweet" data-url="http://weslleyaraujo.github.io/ekans-js/">Tweet</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-				</div>
-			</div>
-		</div>
+          <a href="https://twitter.com/share" class="twitter-share-button top-social tweet" data-url="http://weslleyaraujo.github.io/ekans-js/">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+      </div>
+    </div>
 
-		<div class="intro" id="won">
-			<div class="intro-wrap">
-				<h1>YOU WON!</h1>
-				<p>I CANT BELIEVE THAT</p> 
-				<p>share this games with your friends</p>
-				<div class="social-share">
-					<div class="fb-share-button top-social share" data-href="http://weslleyaraujo.github.io/ekans-js/" data-type="button_count"></div>
+    <div class="intro" id="won">
+      <div class="intro-wrap">
+        <h1>YOU WON!</h1>
+        <p>I CANT BELIEVE THAT</p> 
+        <p>share this games with your friends</p>
+        <div class="social-share">
+          <div class="fb-share-button top-social share" data-href="http://weslleyaraujo.github.io/ekans-js/" data-type="button_count"></div>
 
-					<a href="https://twitter.com/share" class="twitter-share-button top-social tweet" data-url="http://weslleyaraujo.github.io/ekans-js/">Tweet</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-				</div>
-			</div>
-		</div>
+          <a href="https://twitter.com/share" class="twitter-share-button top-social tweet" data-url="http://weslleyaraujo.github.io/ekans-js/">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+      </div>
+    </div>
 
-		<div class="game-wrap">
-			<table class="game" cellspacing="0" id="game">
-			</table>
-			<div class="game-buttons">
-				<div class="buttons-wrap">
-					<div class="buttons-start-wrap">
-						<a data-keypress="32" class="buttons buttons-start" href="javascript:void(0);"></a>
-					</div>
+    <div class="game-wrap">
+      <table class="game" cellspacing="0" id="game">
+      </table>
+      <div class="game-buttons">
+        <div class="buttons-wrap">
+          <div class="buttons-start-wrap">
+            <a data-keypress="32" class="buttons buttons-start" href="javascript:void(0);"></a>
+          </div>
 
-					<div class="buttons-directionals-wrap">
-						<a data-keypress="38" class="buttons buttons-directionals is-up" href="javascript:void(0);"></a>
-						<a data-keypress="39" class="buttons buttons-directionals is-right" href="javascript:void(0);"></a>
-						<a data-keypress="40" class="buttons buttons-directionals is-down" href="javascript:void(0);"></a>
-						<a data-keypress="37" class="buttons buttons-directionals is-left" href="javascript:void(0);"></a>
-					</div>
-				</div>
-			</div>
-			<div class="description">
-				created with <span class="description-heart">&hearts;</span> by Weslley Araujo
-			</div>
-		</div>
+          <div class="buttons-directionals-wrap">
+            <a data-keypress="38" class="buttons buttons-directionals is-up" href="javascript:void(0);"></a>
+            <a data-keypress="39" class="buttons buttons-directionals is-right" href="javascript:void(0);"></a>
+            <a data-keypress="40" class="buttons buttons-directionals is-down" href="javascript:void(0);"></a>
+            <a data-keypress="37" class="buttons buttons-directionals is-left" href="javascript:void(0);"></a>
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        created with <span class="description-heart">&hearts;</span> by Weslley Araujo
+      </div>
+    </div>
 
-		<script type="text/template" id="field-template">
-			<td class="game-field <% if (snake) { %> is-snake <% } %> <% if (food) { %> is-food <% } %>"
-				data-position="<%= position %>"
-				data-line="<%= line %>">
-			</td>
-		</script>
+    <script type="text/template" id="field-template">
+      <td class="game-field <% if (snake) { %> is-snake <% } %> <% if (food) { %> is-food <% } %>"
+        data-position="<%= position %>"
+        data-line="<%= line %>">
+      </td>
+    </script>
 
-		<script src="./bower_components/jquery/dist/jquery.min.js"></script>
-		<script src="./bower_components/underscore/underscore.js"></script>
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./bower_components/underscore/underscore.js"></script>
 
-		<script src="/lib/helpers.js"></script>
-		<script src="/lib/data/food.js"></script>
-		<script src="/lib/data/field.js"></script>
-		<script src="/lib/data/snake.js"></script>
-		<script src="/lib/views/fieldView.js"></script>
-		<script src="/lib/ekans.js"></script>
+    <script src="/lib/helpers.js"></script>
+    <script src="/lib/data/food.js"></script>
+    <script src="/lib/data/field.js"></script>
+    <script src="/lib/data/snake.js"></script>
+    <script src="/lib/views/fieldView.js"></script>
+    <script src="/lib/ekans.js"></script>
 
-		<script>
-			(function () {
-				var ekans = (function () {
-					var app, attributes= {
-						keys: {
-							space: 32
-						},
-						messages: {
-							newGame: 'Do you really want to start a new game?'
-						},
+    <script>
+      (function () {
+        var ekans = (function () {
+          var app, attributes= {
+              keys: {
+                space: 32
+              },
+              messages: {
+                newGame: 'Do you really want to start a new game?'
+              },
 
-						running: false
-					},
+              running: false
+            },
 
-					app = {
-						initialize: function () {
-							this.set();
-							this.hideSnake();
-							this.bind();
-							this.showIntro();
-						},
+            app = {
+              initialize: function () {
+                this.set();
+                this.hideSnake();
+                this.bind();
+                this.showIntro();
+              },
 
-						set: function () {
-							this.ekans = new Ekans();
-							this.$items = $('td');
-							this.$intro = $('#intro');
-							this.$died = $('#died');
-							this.$body = $('body');
-							this.$buttons = $('[data-keypress]');
-						},
+              set: function () {
+                this.ekans = new Ekans();
+                this.$items = $('td');
+                this.$intro = $('#intro');
+                this.$died = $('#died');
+                this.$body = $('body');
+                this.$buttons = $('[data-keypress]');
+              },
 
-						bind: function () {
-							this.$body.on('keypress', this.onKey);
-							this.$buttons.on('click', this.onClick);
-						},
+              bind: function () {
+                this.$body.on('keypress', this.onKey);
+                this.$buttons.on('click', this.onClick);
+              },
 
-						hideSnake: function () {
-							this.$items.removeClass('is-snake is-food');
-						},
+              hideSnake: function () {
+                this.$items.removeClass('is-snake is-food');
+              },
 
-						hideIntro: function () {
-							this.$intro.removeClass('is-visible');
-							this.$died.removeClass('is-visible');
-						},
+              hideIntro: function () {
+                this.$intro.removeClass('is-visible');
+                this.$died.removeClass('is-visible');
+              },
 
-						showIntro: function () {
-							this.$intro.addClass('is-visible');
-						},
+              showIntro: function () {
+                this.$intro.addClass('is-visible');
+              },
 
-						onKey: function (event) {
-							switch (event.which) {
-								case attributes.keys.space :
-									event.preventDefault && event.preventDefault();
-									if (!attributes.running) {
-										app.start();
-									}
-									else if (confirm(attributes.messages.newGame)) {
-										app.start();
-									}
-								break;
-							}
-							
-						},
+              onKey: function (event) {
+                switch (event.which) {
+                  case attributes.keys.space :
+                  event.preventDefault && event.preventDefault();
+                  if (!attributes.running) {
+                    app.start();
+                  }
+                  else if (confirm(attributes.messages.newGame)) {
+                    app.start();
+                  }
+                  break;
+                }
 
-						start: function () {
-							if (attributes.running) {
-								this.ekans.end();
-							}
+              },
 
-							attributes.running = true;
-							app.hideIntro();
-							this.ekans = new Ekans();
-							app.ekans.start();
-						},
+              start: function () {
+                if (attributes.running) {
+                  this.ekans.end();
+                }
 
-						onClick: function (event) {
-							var which = $(this).data('keypress'),
-							event = {
-								which: which
-							};
-							console.log(attributes);
-							if (event.which !== attributes.keys.space && attributes.running) {
-								app.ekans.move(event);
-							}
-							else {
-								app.onKey(event);
-							}
-						}
-					};
+                  attributes.running = true;
+                app.hideIntro();
+                this.ekans = new Ekans();
+                app.ekans.start();
+              },
 
-					return app;
+                onClick: function (event) {
+                  var which = $(this).data('keypress'),
+                  event = {
+                    which: which
+                  };
+                  console.log(attributes);
+                  if (event.which !== attributes.keys.space && attributes.running) {
+                    app.ekans.move(event);
+                  }
+                  else {
+                    app.onKey(event);
+                  }
+                }
+              };
 
-				}().initialize());
-			}());
-		</script>
+              return app;
 
-	</body>
-</html>
+            }().initialize());
+          }());
+        </script>
+
+      </body>
+    </html>
