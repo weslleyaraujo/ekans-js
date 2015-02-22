@@ -70,8 +70,8 @@
     </div>
 
     <div class="game-wrap">
-      <table class="game" cellspacing="0" id="game">
-      </table>
+      <div class="game" cellspacing="0" id="game">
+      </div>
       <div class="game-buttons">
         <div class="buttons-wrap">
           <div class="buttons-start-wrap">
@@ -92,10 +92,10 @@
     </div>
 
     <script type="text/template" id="field-template">
-      <td class="game-field <% if (snake) { %> is-snake <% } %> <% if (food) { %> is-food <% } %>"
+      <div class="game-field <% if (snake) { %> is-snake <% } %> <% if (food) { %> is-food <% } %>"
         data-position="<%= position %>"
         data-line="<%= line %>">
-      </td>
+      </div>
     </script>
 
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
@@ -188,7 +188,7 @@
                   event = {
                     which: which
                   };
-                  console.log(attributes);
+
                   if (event.which !== attributes.keys.space && attributes.running) {
                     app.ekans.move(event);
                   }

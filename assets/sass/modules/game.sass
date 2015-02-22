@@ -7,12 +7,19 @@ $module-name: 'game'
 $module-background-color: #D4D9A6
 $module-item-color: #C9A83A
 $module-wrap-background-color: rgb(88, 108, 211)
+$module-width: 380px
+$module-height: 360px
 
 .#{$module-name}
   background-color: $module-background-color
+  margin: 0 auto
+  width: $module-width
+  height: $module-height
 
 .#{$module-name}-line
-  line-height: 18px
+  float: left
+  width: 100%
+  height: 18px
 
 .#{$module-name}-field
   width: 15px
@@ -20,7 +27,7 @@ $module-wrap-background-color: rgb(88, 108, 211)
   outline: 1px solid $module-item-color
   margin: 0 2px
   position: relative
-  +inline-block
+  float: left
   +opacity(0.1)
   +transition(0.3s)
   &:after

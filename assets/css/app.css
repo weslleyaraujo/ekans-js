@@ -115,70 +115,70 @@
 }
 /* Smacss guide style
  */
-/* line 11, ../../sass/modules/game.sass */
+/* line 13, ../../sass/modules/game.sass */
 .game {
-  background-color: #d4d9a6;
+  background-color: #D4D9A6;
+  margin: 0 auto;
+  width: 380px;
+  height: 360px;
 }
 
-/* line 14, ../../sass/modules/game.sass */
+/* line 19, ../../sass/modules/game.sass */
 .game-line {
-  line-height: 18px;
+  float: left;
+  width: 100%;
+  height: 18px;
 }
 
-/* line 17, ../../sass/modules/game.sass */
+/* line 24, ../../sass/modules/game.sass */
 .game-field {
   width: 15px;
   height: 15px;
-  outline: 1px solid #c9a83a;
+  outline: 1px solid #C9A83A;
   margin: 0 2px;
   position: relative;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
+  float: left;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
   opacity: 0.1;
-  -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-/* line 26, ../../sass/modules/game.sass */
+/* line 33, ../../sass/modules/game.sass */
 .game-field:after {
   content: "";
   width: 13px;
   height: 13px;
-  background: #c9a83a;
+  background: #C9A83A;
   position: absolute;
   left: 1px;
   right: 0;
   top: 1px;
   bottom: 0;
 }
-/* line 37, ../../sass/modules/game.sass */
-.game-field.is-snake {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-/* line 39, ../../sass/modules/game.sass */
-.game-field.is-snake:after {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-/* line 42, ../../sass/modules/game.sass */
-.game-field.is-food {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
 /* line 44, ../../sass/modules/game.sass */
+.game-field.is-snake {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+/* line 46, ../../sass/modules/game.sass */
+.game-field.is-snake:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+/* line 49, ../../sass/modules/game.sass */
+.game-field.is-food {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+/* line 51, ../../sass/modules/game.sass */
 .game-field.is-food:after {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 
-/* line 47, ../../sass/modules/game.sass */
+/* line 54, ../../sass/modules/game.sass */
 .game-wrap {
   background-color: #586cd3;
   padding: 50px 0 0 0;
@@ -186,13 +186,11 @@
   margin: 60px auto;
   position: relative;
   height: 880px;
-  -webkit-border-radius: 13px;
   -moz-border-radius: 13px;
-  -ms-border-radius: 13px;
-  -o-border-radius: 13px;
+  -webkit-border-radius: 13px;
   border-radius: 13px;
 }
-/* line 55, ../../sass/modules/game.sass */
+/* line 62, ../../sass/modules/game.sass */
 .game-wrap:after {
   content: "";
   position: absolute;
@@ -200,14 +198,14 @@
   height: 364px;
   top: 46px;
   left: 56px;
-  -webkit-box-shadow: inset 7px 8px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: inset 7px 8px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 7px 8px 0px rgba(0, 0, 0, 0.5);
   box-shadow: inset 7px 8px 0px rgba(0, 0, 0, 0.5);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
 
-/* line 66, ../../sass/modules/game.sass */
+/* line 73, ../../sass/modules/game.sass */
 .points {
   color: #ff2828;
 }
